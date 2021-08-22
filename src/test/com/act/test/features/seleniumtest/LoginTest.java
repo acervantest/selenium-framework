@@ -1,8 +1,9 @@
 package com.act.test.features.seleniumtest;
 
+
+import com.act.test.features.pages.LoginPage;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -23,8 +24,7 @@ public class LoginTest {
 
     @Test
     public void login(){
-        _driver.findElement(By.name("UserName")).sendKeys("admin");
-        _driver.findElement(By.name("Password")).sendKeys("admin");
-        _driver.findElement(By.name("Login")).submit();
+        LoginPage loginPage = new LoginPage(_driver);
+        loginPage.login("admin", "admin");
     }
 }
