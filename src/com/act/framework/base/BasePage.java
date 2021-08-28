@@ -1,12 +1,6 @@
 package com.act.framework.base;
 
-import org.openqa.selenium.support.PageFactory;
-
-public abstract class BasePage extends Base{
-
-    public BasePage(){
-        PageFactory.initElements(DriverContext.driver, this);
-    }
+public abstract class BasePage extends Base {
 
     public <T extends BasePage> T as(Class<T> page){
         try {
