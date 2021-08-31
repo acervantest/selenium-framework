@@ -1,7 +1,8 @@
-package com.act.test.features.seleniumtest;
+package com.act.test.seleniumtest;
 
-import com.act.test.features.pages.HomePage;
-import com.act.test.features.pages.LoginPage;
+import com.act.test.pages.HomePage;
+import com.act.test.pages.LoginPage;
+import com.act.test.steps.TestInitializer;
 import org.junit.Test;
 
 public class LoginTest extends TestInitializer {
@@ -14,6 +15,6 @@ public class LoginTest extends TestInitializer {
 
        Thread.sleep(2000);
 
-       CurrentPage.as(LoginPage.class).login("admin", "password");
+       CurrentPage.as(LoginPage.class).enterUsernamePassword("admin", "password");
     }
 }

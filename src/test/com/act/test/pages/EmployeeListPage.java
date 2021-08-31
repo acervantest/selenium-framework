@@ -1,4 +1,4 @@
-package com.act.test.features.pages;
+package com.act.test.pages;
 
 import com.act.framework.base.BasePage;
 

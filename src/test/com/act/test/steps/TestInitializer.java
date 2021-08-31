@@ -1,4 +1,4 @@
-package com.act.test.features.seleniumtest;
+package com.act.test.steps;
 
 import com.act.framework.base.BrowserType;
 import com.act.framework.base.DriverContext;
@@ -6,7 +6,8 @@ import com.act.framework.base.FrameworkInitialize;
 import com.act.framework.config.ConfigReader;
 import com.act.framework.config.Settings;
 import com.act.framework.utilities.LogUtil;
-import org.junit.Before;
+import io.cucumber.java.Before;
+
 import java.io.IOException;
 
 public class TestInitializer extends FrameworkInitialize {
