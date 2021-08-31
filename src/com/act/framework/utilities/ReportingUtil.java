@@ -1,4 +1,4 @@
-package com.act.utilities;
+package com.act.framework.utilities;
 
 public class ReportingUtil {
 }

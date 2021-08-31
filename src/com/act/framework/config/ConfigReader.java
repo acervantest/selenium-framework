@@ -14,5 +14,6 @@ public class ConfigReader {
         Properties properties = new Properties();
         properties.load(getClass().getResourceAsStream("GlobalConfig.properties"));
         Settings.logPath = properties.getProperty("LOG_PATH");
+        Settings.mainUrl = properties.getProperty("MAIN_URL");
     }
 }
