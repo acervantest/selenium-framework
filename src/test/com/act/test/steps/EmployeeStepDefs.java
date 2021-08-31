@@ -1,6 +1,7 @@
 package com.act.test.steps;
 
 import com.act.framework.base.Base;
+import com.act.framework.utilities.CucumberUtil;
 import com.act.test.pages.CreateEmployeePage;
 import com.act.test.pages.EmployeeListPage;
 import com.act.test.pages.HomePage;
@@ -36,11 +37,15 @@ public class EmployeeStepDefs extends Base {
     @And("enter details")
     public void enterDetails(DataTable data) throws InterruptedException {
         List<List<String>> tableData = data.asLists();
+
+        CucumberUtil.convertDataTableToDictionary(data);
+
         CurrentPage.as(CreateEmployeePage.class).enterEmployeeDetails(
-                tableData.get(1).get(0).toString(), tableData.get(1).get(1).toString(),
-                tableData.get(1).get(2).toString(), tableData.get(1).get(3).toString(),
-                tableData.get(1).get(4).toString()
-                );
+                CucumberUtil.getCellValue("name"),
+                CucumberUtil.getCellValue("salary"),
+                CucumberUtil.getCellValue("durationworked"),
+                CucumberUtil.getCellValue("grade"),
+                CucumberUtil.getCellValue("email") );
         Thread.sleep(3000);
     }
 
