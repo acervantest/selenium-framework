@@ -30,4 +30,9 @@ public class HomePage extends BasePage {
     public String getLoggedInUser(){
         return lnkUsername.getText();
     }
+
+    public EmployeeListPage clickEmployeeList(){
+        lnkEmployeeList.click();
+        return getInstance(EmployeeListPage.class);
+    }
 }

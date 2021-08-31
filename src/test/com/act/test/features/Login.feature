@@ -1,4 +1,4 @@
-Feature: LoginFeature
+Feature: Login
   This feature is responsible for testing all login scenarios
 
   Scenario: Check login with correct username and password
