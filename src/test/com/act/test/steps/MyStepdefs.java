@@ -18,13 +18,13 @@ public class MyStepdefs extends Base {
     public void theAppIsOpen() throws InterruptedException {
         CurrentPage = getInstance(HomePage.class);
         Assert.assertTrue("Home page is not displayed", CurrentPage.as(HomePage.class).isDisplayed());
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
     @Then("click login link")
     public void clickLoginLink() throws InterruptedException {
         CurrentPage = CurrentPage.as(HomePage.class).clickLogin(); // NAVIGATING TO LOGIN PAGE
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
     @When("enter username and password")
@@ -36,7 +36,7 @@ public class MyStepdefs extends Base {
     @Then("click login button")
     public void clickLoginButton() throws InterruptedException {
         CurrentPage = CurrentPage.as(LoginPage.class).clickLogin(); // NAVIGATING TO HOME PAGE
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
     @Then("username and hello should be displayed")

@@ -19,19 +19,19 @@ public class EmployeeStepDefs extends Base {
     public void theApplicationIsOpen() throws InterruptedException {
         CurrentPage = getInstance(HomePage.class);
         Assert.assertTrue("Home page is not displayed", CurrentPage.as(HomePage.class).isDisplayed());
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
     @And("click employee list link")
     public void clickEmployeeListLink() throws InterruptedException {
         CurrentPage = CurrentPage.as(HomePage.class).clickEmployeeList();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
     @Then("click create new button")
     public void clickCreateNewButton() throws InterruptedException {
         CurrentPage = CurrentPage.as(EmployeeListPage.class).clickCreateNewButton();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
     @And("enter details")
@@ -46,12 +46,12 @@ public class EmployeeStepDefs extends Base {
                 CucumberUtil.getCellValue("durationworked"),
                 CucumberUtil.getCellValue("grade"),
                 CucumberUtil.getCellValue("email") );
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 
     @And("click create button")
     public void clickCreateButton() throws InterruptedException {
         CurrentPage.as(CreateEmployeePage.class).clickCreateEmployeeButton();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
     }
 }
