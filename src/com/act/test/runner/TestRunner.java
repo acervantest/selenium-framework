@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-@CucumberOptions(features = {"src/test/com/act/test/features/"}, glue = {"com/act/test/steps"})
+@CucumberOptions(features = {"src/com/act/test/features/"}, glue = {"com/act/test/steps"})
 public class TestRunner {// extends AbstractTestNGCucumberTests {
 
     private TestNGCucumberRunner testNGCucumberRunner;
