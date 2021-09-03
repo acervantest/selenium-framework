@@ -1,9 +1,9 @@
 package com.act.test.steps;
 
 import com.act.framework.base.Base;
+
 import com.act.test.pages.HomePage;
 import com.act.test.pages.LoginPage;
-
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
