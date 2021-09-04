@@ -11,6 +11,7 @@ Feature: Employee
     And click employee list link
     Then click create new button
     And enter details
-    | name | salary | durationworked | grade | email |
-    | autouser | 4000 | 30         | 1     | autouser@ea.com |
+    | name     | salary | durationworked | grade | email           |
+    | autouser | 4000   | 30             | 1     | autouser@ea.com |
+    | act      | 6400   | 40             | 1     | actuser@ea.com  |
     And click create button

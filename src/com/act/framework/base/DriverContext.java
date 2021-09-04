@@ -1,10 +1,7 @@
 package com.act.framework.base;
 
 import com.act.framework.config.Settings;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -27,7 +24,7 @@ public class DriverContext {
                     return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
                 }
             });
-        } catch (Throwable error) {
+        } catch (TimeoutException error) {
             Settings.logger.write("Timeout waiting for page load request to complete.");
         }
     }

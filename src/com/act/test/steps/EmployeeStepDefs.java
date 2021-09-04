@@ -42,11 +42,12 @@ public class EmployeeStepDefs extends Base {
         CucumberUtil.convertDataTableToDictionary(data);
 
         CurrentPage.as(CreateEmployeePage.class).enterEmployeeDetails(
-                CucumberUtil.getCellValue("name"),
-                CucumberUtil.getCellValue("salary"),
-                CucumberUtil.getCellValue("durationworked"),
-                CucumberUtil.getCellValue("grade"),
-                CucumberUtil.getCellValue("email") );
+                CucumberUtil.getCellValueWithRowIndex("name",2),
+                CucumberUtil.getCellValueWithRowIndex("salary",2),
+                CucumberUtil.getCellValueWithRowIndex("durationworked",2),
+                CucumberUtil.getCellValueWithRowIndex("grade",2),
+                CucumberUtil.getCellValueWithRowIndex("email",2)
+        );
     }
 
     @And("click create button")
