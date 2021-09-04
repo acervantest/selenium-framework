@@ -1,4 +1,4 @@
-package com.act.test.runner;
+package runner;
 
 import io.cucumber.testng.*;
 import org.testng.ITestContext;

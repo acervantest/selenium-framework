@@ -1,9 +1,9 @@
-package com.act.test.seleniumtest;
+package seleniumtest;
 
-import com.act.test.pages.HomePage;
-import com.act.test.pages.LoginPage;
-import com.act.test.steps.TestInitializer;
-import org.junit.Test;
+import org.testng.annotations.Test;
+import pages.HomePage;
+import pages.LoginPage;
+import steps.TestInitializer;
 
 public class LoginTest extends TestInitializer {
 

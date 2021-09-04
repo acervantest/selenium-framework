@@ -1,10 +1,10 @@
-package com.act.test.steps;
+package steps;
 
 import com.act.framework.base.Base;
 
 import com.act.framework.base.DriverContext;
-import com.act.test.pages.HomePage;
-import com.act.test.pages.LoginPage;
+import pages.HomePage;
+import pages.LoginPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

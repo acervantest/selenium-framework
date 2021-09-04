@@ -1,11 +1,11 @@
-package com.act.test.steps;
+package steps;
 
 import com.act.framework.base.Base;
 import com.act.framework.base.DriverContext;
 import com.act.framework.utilities.CucumberUtil;
-import com.act.test.pages.CreateEmployeePage;
-import com.act.test.pages.EmployeeListPage;
-import com.act.test.pages.HomePage;
+import pages.CreateEmployeePage;
+import pages.EmployeeListPage;
+import pages.HomePage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

@@ -1,4 +1,4 @@
-package com.act.test.steps;
+package steps;
 
 import com.act.framework.base.BrowserType;
 import com.act.framework.base.DriverContext;

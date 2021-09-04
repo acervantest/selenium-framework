@@ -1,4 +1,4 @@
-package com.act.test.pages;
+package pages;
 
 import com.act.framework.base.BasePage;
 import org.openqa.selenium.WebElement;
