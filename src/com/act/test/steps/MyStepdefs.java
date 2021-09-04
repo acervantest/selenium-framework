@@ -2,6 +2,7 @@ package com.act.test.steps;
 
 import com.act.framework.base.Base;
 
+import com.act.framework.base.DriverContext;
 import com.act.test.pages.HomePage;
 import com.act.test.pages.LoginPage;
 import io.cucumber.datatable.DataTable;
@@ -15,16 +16,16 @@ import java.util.List;
 public class MyStepdefs extends Base {
 
     @Given("the app is open")
-    public void theAppIsOpen() throws InterruptedException {
+    public void theAppIsOpen()  {
         CurrentPage = getInstance(HomePage.class);
         Assert.assertTrue("Home page is not displayed", CurrentPage.as(HomePage.class).isDisplayed());
-        Thread.sleep(1000);
+        DriverContext.waitForPageToLoad();
     }
 
     @Then("click login link")
-    public void clickLoginLink() throws InterruptedException {
+    public void clickLoginLink() {
         CurrentPage = CurrentPage.as(HomePage.class).clickLogin(); // NAVIGATING TO LOGIN PAGE
-        Thread.sleep(1000);
+        DriverContext.waitForPageToLoad();
     }
 
     @When("enter username and password")
@@ -34,9 +35,9 @@ public class MyStepdefs extends Base {
     }
 
     @Then("click login button")
-    public void clickLoginButton() throws InterruptedException {
+    public void clickLoginButton(){
         CurrentPage = CurrentPage.as(LoginPage.class).clickLogin(); // NAVIGATING TO HOME PAGE
-        Thread.sleep(1000);
+        DriverContext.waitForPageToLoad();
     }
 
     @Then("username and hello should be displayed")

@@ -1,6 +1,7 @@
 package com.act.test.pages;
 
 import com.act.framework.base.BasePage;
+import com.act.framework.base.DriverContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -30,6 +31,7 @@ public class CreateEmployeePage extends BasePage {
     }
 
     public void enterEmployeeDetails(String name, String salary, String durationWorked, String grade, String email){
+        DriverContext.waitForElementVisible(txtName);
         txtName.sendKeys(name);
         txtSalary.sendKeys(salary);
         txtDurationWorked.sendKeys(durationWorked);

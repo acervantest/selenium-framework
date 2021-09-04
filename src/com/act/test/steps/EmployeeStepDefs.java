@@ -1,6 +1,7 @@
 package com.act.test.steps;
 
 import com.act.framework.base.Base;
+import com.act.framework.base.DriverContext;
 import com.act.framework.utilities.CucumberUtil;
 import com.act.test.pages.CreateEmployeePage;
 import com.act.test.pages.EmployeeListPage;
@@ -19,19 +20,19 @@ public class EmployeeStepDefs extends Base {
     public void theApplicationIsOpen() throws InterruptedException {
         CurrentPage = getInstance(HomePage.class);
         Assert.assertTrue("Home page is not displayed", CurrentPage.as(HomePage.class).isDisplayed());
-        Thread.sleep(1000);
+        DriverContext.waitForPageToLoad();
     }
 
     @And("click employee list link")
     public void clickEmployeeListLink() throws InterruptedException {
         CurrentPage = CurrentPage.as(HomePage.class).clickEmployeeList();
-        Thread.sleep(1000);
+        DriverContext.waitForPageToLoad();
     }
 
     @Then("click create new button")
     public void clickCreateNewButton() throws InterruptedException {
         CurrentPage = CurrentPage.as(EmployeeListPage.class).clickCreateNewButton();
-        Thread.sleep(1000);
+        DriverContext.waitForPageToLoad();
     }
 
     @And("enter details")
@@ -46,12 +47,10 @@ public class EmployeeStepDefs extends Base {
                 CucumberUtil.getCellValue("durationworked"),
                 CucumberUtil.getCellValue("grade"),
                 CucumberUtil.getCellValue("email") );
-        Thread.sleep(1000);
     }
 
     @And("click create button")
     public void clickCreateButton() throws InterruptedException {
         CurrentPage.as(CreateEmployeePage.class).clickCreateEmployeeButton();
-        Thread.sleep(1000);
     }
 }

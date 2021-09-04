@@ -17,15 +17,14 @@ public class LogUtil {
 
     private BufferedWriter bufferedWriter = null;
 
-    //Create log file
+    // CREATE LOG FILE
     public void createLogFile() throws IOException {
         try {
-            //create directory
-            //File dir = new File(System.getProperty("user.dir") + File.separator + "logs" + File.separator);
+            // CREATE DIRECTORY
             File dir = new File(System.getProperty("user.dir") + Settings.logPath);
             if(!dir.exists()) dir.mkdir();
 
-            //create file
+            // CREATE FILE
             File logFile = new File(dir + "/" + fileName + ".log");
             FileWriter fileWriter = new FileWriter(logFile.getAbsoluteFile());
             bufferedWriter = new BufferedWriter(fileWriter);
@@ -35,7 +34,7 @@ public class LogUtil {
         }
     }
 
-    //write message within the log
+    // WRITE MESSAGE WITHIN LOG
     public void write(String message){
         try {
 
