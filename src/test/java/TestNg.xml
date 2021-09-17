@@ -3,7 +3,11 @@
 <suite name="Suite" verbose="1" >
     <test name="Employee" >
         <classes>
-            <class name="com.act.test.runner.TestRunner" />
+            <class name="runner.TestRunner" >
+                <methods>
+                    <include name="feature"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
